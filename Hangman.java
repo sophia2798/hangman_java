@@ -79,6 +79,13 @@ public class Hangman {
         for (int i=0; i<hiddenWord.length(); i++) {
             wordArr[i] = '_';
         }
+
+        printDefault(gallows, wordArr, missed, 0);
+
+        while (missedGuesses < 7) {
+            System.out.print("\n\nGuess:\t");
+            userInput = scan.next().charAt(0);
+        }
     }
 
     /**
