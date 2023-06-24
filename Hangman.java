@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Hangman {
@@ -149,5 +150,22 @@ public class Hangman {
         System.out.println(gallows[gallowsIdx]);
         printWord(wordArr);
         printMisses(missedArr);
+    }
+
+    /**
+     * Functon name: updateMissedArr
+     * @param oldArray char[]
+     * @param miss char
+     * @return newArr char[]
+     * 
+     * Inside function:
+     * - creates a new array of length n+1 (where n is length of old array) with new incorrect user guess
+     * - returns that new array
+     */
+    public static char[] updateMissedArr(char oldArray[], char miss) {
+        char newArr[] = Arrays.copyOf(oldArray, oldArray.length + 1);
+        newArr[newArr.length - 1] = miss;
+
+        return newArr;
     }
 }
