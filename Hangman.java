@@ -110,4 +110,20 @@ public class Hangman {
             System.out.print(missedArr[i] + " ");
         }
     }
+
+    /**
+     * Function name: printWord
+     * @param wordArr char[]
+     * 
+     * Inside function:
+     * - takes in an array of correctly guessed and blank spaces of the correct word
+     * - prints the correct guesses and "_"'s to the terminal
+     */
+    public static void printWord(char wordArr[]) {
+        System.out.print("\n\nWord:\t");
+
+        for (int i=0; i<wordArr.length; i++) {
+            System.out.print(wordArr[i] + " ");
+        }
+    }
 }
