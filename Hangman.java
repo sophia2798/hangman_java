@@ -1,3 +1,4 @@
+import java.io.Console;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -70,12 +71,11 @@ public class Hangman {
     " =========\n"};
 
     static Scanner scan = new Scanner(System.in);
+    static Console console = System.console();
     public static int numCorrect = 0;
     public static void main(String[] args) {
 
-        System.out.print("Welcome to Hangman! Player 1, input the word you'd like Player 2 to guess: ");
-
-        String hiddenWord = scan.nextLine();
+        String hiddenWord = new String(console.readPassword("\nWelcome to Hangman! Player 1, input the word you'd like Player 2 to guess: "));
         int missedGuesses = 0;
         char userInput = '!';
         char[] missed = {};
