@@ -72,7 +72,13 @@ public class Hangman {
     public static void main(String[] args) {
 
         String hiddenWord = getRandomWord(words);
-        System.out.println(hiddenWord);
+        int missedGuesses = 0;
+        char userInput = '!';
+        char[] missed = {};
+        char [] wordArr = new char[hiddenWord.length()];
+        for (int i=0; i<hiddenWord.length(); i++) {
+            wordArr[i] = '_';
+        }
     }
 
     /**
