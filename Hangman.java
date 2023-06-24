@@ -87,6 +87,13 @@ public class Hangman {
         while (missedGuesses < 7) {
             System.out.print("\n\nGuess:\t");
             userInput = scan.next().charAt(0);
+
+            if (hiddenWord.indexOf(userInput) != -1) {
+                wordArr = updateWordArr(hiddenWord, userInput, wordArr);
+            } else {
+                missed = updateMissedArr(missed, userInput);
+                missedGuesses++;
+            }
         }
     }
 
