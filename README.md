@@ -8,3 +8,8 @@ Topics covered in Module 1
 - Functions
 - Loops
 - Arrays
+
+## Gameplay
+Requires 2 Players (Player 1 chooses the hidden word, Player 2 guesses)
+1. Player 1 inputs the hidden word
+2. Player 2 guesses until either correctly guessing the word or missing over 6 guesses
