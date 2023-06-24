@@ -94,4 +94,20 @@ public class Hangman {
         
         return wordsArray[randomIdx];
     }
+
+    /**
+     * Function name: printMisses
+     * @param missedArr char[]
+     * 
+     * Inside function:
+     * - takes in an array of missed/incorrect guesses
+     * - prints them in the terminal to show the player what incorrect guesses they have already made
+     */
+    public static void printMisses(char missedArr[]) {
+        System.out.print("\n\nMissed:\t");
+
+        for (int i=0; i<missedArr.length; i++) {
+            System.out.print(missedArr[i] + " ");
+        }
+    }
 }
