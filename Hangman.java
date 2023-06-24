@@ -126,4 +126,21 @@ public class Hangman {
             System.out.print(wordArr[i] + " ");
         }
     }
+
+    /**
+     * Function name: printDefault
+     * @param gallows String
+     * @param wordArr char[]
+     * @param missedArr char[]
+     * @param gallowsIdx int
+     * 
+     * Inside function:
+     * - takes in the gallows string array, words array, missed guesses array, and an index valie
+     * - prints out the default game screen at every turn 
+     */
+    public static void printDefault(String gallows[], char wordArr[], char missedArr[], int gallowsIdx) {
+        System.out.println(gallows[gallowsIdx]);
+        printWord(wordArr);
+        printMisses(missedArr);
+    }
 }
