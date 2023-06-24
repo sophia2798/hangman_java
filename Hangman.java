@@ -94,6 +94,16 @@ public class Hangman {
                 missed = updateMissedArr(missed, userInput);
                 missedGuesses++;
             }
+
+            printDefault(gallows, wordArr, missed, missedGuesses);
+
+            if (numCorrect == hiddenWord.length()) {
+                System.out.println("\n\nCongrats! You got it right!");
+                break;
+            } else if (missedGuesses > 5) {
+                System.out.println("\n\nYou dumb as fuck.");
+                break;
+            }
         }
     }
 
