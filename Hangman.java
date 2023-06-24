@@ -70,6 +70,22 @@ public class Hangman {
 
     static Scanner scan = new Scanner(System.in);
     public static void main(String[] args) {
+
+        String hiddenWord = getRandomWord(words);
+        System.out.println(hiddenWord);
+    }
+
+    /**
+     * Function name: getRandomWord
+     * @param wordsArray String[]
+     * @return word String
+     * 
+     * Inside function:
+     * - choose a random work from an array of test words to guess in hangman
+     */
+    public static String getRandomWord(String wordsArray[]) {
+        int randomIdx = (int) (Math.random() * wordsArray.length);
         
+        return wordsArray[randomIdx];
     }
 }
