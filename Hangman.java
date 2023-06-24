@@ -73,7 +73,9 @@ public class Hangman {
     public static int numCorrect = 0;
     public static void main(String[] args) {
 
-        String hiddenWord = getRandomWord(words);
+        System.out.print("Welcome to Hangman! Player 1, input the word you'd like Player 2 to guess: ");
+
+        String hiddenWord = scan.nextLine();
         int missedGuesses = 0;
         char userInput = '!';
         char[] missed = {};
@@ -82,6 +84,7 @@ public class Hangman {
             wordArr[i] = '_';
         }
 
+        System.out.println("Player 2, please start guessing!");
         printDefault(gallows, wordArr, missed, 0);
 
         while (missedGuesses < 7) {
