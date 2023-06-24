@@ -105,6 +105,8 @@ public class Hangman {
                 break;
             }
         }
+
+        scan.close();
     }
 
     /**
