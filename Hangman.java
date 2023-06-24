@@ -70,6 +70,7 @@ public class Hangman {
     " =========\n"};
 
     static Scanner scan = new Scanner(System.in);
+    public static int numCorrect = 0;
     public static void main(String[] args) {
 
         String hiddenWord = getRandomWord(words);
@@ -167,5 +168,24 @@ public class Hangman {
         newArr[newArr.length - 1] = miss;
 
         return newArr;
+    }
+
+    /**
+     * Function name: updateWordArr
+     * @param word String
+     * @param guess char
+     * @param oldArr char[]
+     * @return oldArr (updated) char[]
+     */
+    public static char[] updateWordArr(String word, char guess, char oldArr[]) {
+
+        for (int i=0; i<word.length(); i++) {
+            if (word.charAt(i) == guess) {
+                oldArr[i] = guess;
+                numCorrect++;
+            }
+        }
+
+        return oldArr;
     }
 }
